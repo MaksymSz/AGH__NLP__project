@@ -4,7 +4,9 @@
 
 ## Overview
 This repository contains all the code, reports, and resources for the three projects completed as part of the Natural Language Processing course during 5th semester.
+In all projects, the Italian language was the focus of the research.
 Each project explores different aspects of NLP, from basic text preprocessing to advanced models like Named Entity Recognition (NER).
+
 
 ## Table of Contents
 - [Installation](#Installation)
@@ -37,6 +39,7 @@ The project is organized into the following directories and files:
 │   ├── project_3_Report.pdf
 │   └── README.md
 │
+├── utils
 └── requirements.txt                            	# List of required Python packages
 ```
 
@@ -56,6 +59,14 @@ pip install -r requirements.txt
 
 ## Data
 Data can be obtained from public repository.
+
+## Reports
+Each project includes a detailed report that covers:
+
+1. Introduction: Brief description of the problem and its relevance. 
+2. Methods: Explanation of techniques used in the project. 
+3. Results: Key results and performance metrics. 
+4. Conclusion: Insights gained and potential improvements.
 
 ## License
 This project is licensed under the MIT License.
