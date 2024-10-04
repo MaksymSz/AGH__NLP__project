@@ -3,7 +3,7 @@ from pathlib import Path
 import os
 import gzip
 
-datapath = Path('../../data')
+datapath = Path('../../data/')
 
 base_url = "https://clarin.eurac.edu/repository/xmlui/bitstream/handle/20.500.12124/3"
 
@@ -28,5 +28,5 @@ for file_name in file_names:
 if not os.path.exists(datapath / 'corpus_raw.txt'):
     with gzip.open(datapath / 'paisa.raw.utf8.gz', 'rt', encoding='utf-8') as f:
         content = f.read()
-    with open(datapath / 'corpus_raw.txt', 'a') as txt:
+    with open(datapath / 'corpus_raw.txt', 'a', encoding='utf-8') as txt:
         txt.write(content)
