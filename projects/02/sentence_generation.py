@@ -33,7 +33,7 @@ def build_sentence(r):
 
 
 def random_sentence(n_sentences=10):
-    for r in tmp.get_words(limit=n_sentences):
+    for r in utils.get_words(limit=n_sentences):
         yield build_sentence(r)
 
 
