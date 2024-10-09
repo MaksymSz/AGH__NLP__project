@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <title>Pronouns</title>
+</head>
+<body>
+    <h1>Build an english sentence</h1>
+    <form method="POST">
+        <h2>Choose a pronoun</h2>
+    {% for p in words['pronouns'] %}
+    <label>
+        <input type="radio" value="{{ p[0] }}" name="opt"> {{ p[0] }}
+    </label>
+    <br>
+    {% endfor %}
+        <button type="submit">Next</button>
+    </form>
+    <a href="/">Wróć do strony głównej</a>
+</body>
+</html>

@@ -1,6 +1,7 @@
 create table if not exists nouns (
     id integer primary key autoincrement,
-    word varchar
+    word varchar,
+    plural varchar
 );
 
 create table if not exists verbs(
@@ -31,6 +32,12 @@ create table if not exists determiners(
     id integer primary key autoincrement,
     word varchar
 );
+
+create table if not exists pronouns(
+    id integer primary key autoincrement,
+    word varchar
+);
+
 insert into adjectives (word) values ('big');
 insert into adjectives (word) values ('small');
 insert into adjectives (word) values ('huge');
@@ -60,6 +67,7 @@ insert into determiners (word) values ('those');
 insert into determiners (word) values ('my');
 insert into determiners (word) values ('your');
 insert into determiners (word) values ('their');
+
 insert into prepositional (word) values ('in');
 insert into prepositional (word) values ('on');
 insert into prepositional (word) values ('under');
@@ -70,6 +78,7 @@ insert into prepositional (word) values ('behind');
 insert into prepositional (word) values ('near');
 insert into prepositional (word) values ('inside');
 insert into prepositional (word) values ('at');
+
 insert into adverbs (word) values ('quickly');
 insert into adverbs (word) values ('slowly');
 insert into adverbs (word) values ('carefully');
@@ -80,56 +89,65 @@ insert into adverbs (word) values ('silently');
 insert into adverbs (word) values ('clearly');
 insert into adverbs (word) values ('badly');
 insert into adverbs (word) values ('beautifully');
-insert into nouns (word) values ('cat');
-insert into nouns (word) values ('dog');
-insert into nouns (word) values ('mouse');
-insert into nouns (word) values ('bird');
-insert into nouns (word) values ('lion');
-insert into nouns (word) values ('tiger');
-insert into nouns (word) values ('elephant');
-insert into nouns (word) values ('rabbit');
-insert into nouns (word) values ('car');
-insert into nouns (word) values ('train');
-insert into nouns (word) values ('tree');
-insert into nouns (word) values ('flower');
-insert into nouns (word) values ('house');
-insert into nouns (word) values ('book');
-insert into nouns (word) values ('pencil');
-insert into nouns (word) values ('student');
-insert into nouns (word) values ('teacher');
-insert into nouns (word) values ('doctor');
-insert into nouns (word) values ('actor');
-insert into nouns (word) values ('singer');
-insert into nouns (word) values ('pilot');
-insert into nouns (word) values ('dancer');
-insert into nouns (word) values ('friend');
-insert into nouns (word) values ('father');
-insert into nouns (word) values ('mother');
-insert into nouns (word) values ('sister');
-insert into nouns (word) values ('brother');
-insert into nouns (word) values ('president');
-insert into nouns (word) values ('chef');
-insert into nouns (word) values ('soldier');
-insert into nouns (word) values ('engineer');
-insert into nouns (word) values ('scientist');
-insert into nouns (word) values ('astronaut');
-insert into nouns (word) values ('artist');
-insert into nouns (word) values ('computer');
-insert into nouns (word) values ('robot');
-insert into nouns (word) values ('shark');
-insert into nouns (word) values ('whale');
-insert into nouns (word) values ('dolphin');
-insert into nouns (word) values ('butterfly');
-insert into nouns (word) values ('spider');
-insert into nouns (word) values ('chicken');
-insert into nouns (word) values ('cow');
-insert into nouns (word) values ('horse');
-insert into nouns (word) values ('plane');
-insert into nouns (word) values ('bicycle');
-insert into nouns (word) values ('phone');
-insert into nouns (word) values ('camera');
-insert into nouns (word) values ('clock');
-insert into nouns (word) values ('television');
+
+insert into pronouns (word) values ('I');
+insert into pronouns (word) values ('you');
+insert into pronouns (word) values ('he');
+insert into pronouns (word) values ('she');
+insert into pronouns (word) values ('it');
+insert into pronouns (word) values ('we');
+insert into pronouns (word) values ('they');
+
+insert into nouns (word, plural) values ('cat', 'cats');
+insert into nouns (word, plural) values ('dog', 'dogs');
+insert into nouns (word, plural) values ('mouse', 'mice');
+insert into nouns (word, plural) values ('bird', 'birds');
+insert into nouns (word, plural) values ('lion', 'lions');
+insert into nouns (word, plural) values ('tiger', 'tigers');
+insert into nouns (word, plural) values ('elephant', 'elephants');
+insert into nouns (word, plural) values ('rabbit', 'rabbits');
+insert into nouns (word, plural) values ('car', 'cars');
+insert into nouns (word, plural) values ('train', 'trains');
+insert into nouns (word, plural) values ('tree', 'trees');
+insert into nouns (word, plural) values ('flower', 'flowers');
+insert into nouns (word, plural) values ('house', 'houses');
+insert into nouns (word, plural) values ('book', 'books');
+insert into nouns (word, plural) values ('pencil', 'pencils');
+insert into nouns (word, plural) values ('student', 'students');
+insert into nouns (word, plural) values ('teacher', 'teachers');
+insert into nouns (word, plural) values ('doctor', 'doctors');
+insert into nouns (word, plural) values ('actor', 'actors');
+insert into nouns (word, plural) values ('singer', 'singers');
+insert into nouns (word, plural) values ('pilot', 'pilots');
+insert into nouns (word, plural) values ('dancer', 'dancers');
+insert into nouns (word, plural) values ('friend', 'friends');
+insert into nouns (word, plural) values ('father', 'fathers');
+insert into nouns (word, plural) values ('mother', 'mothers');
+insert into nouns (word, plural) values ('sister', 'sisters');
+insert into nouns (word, plural) values ('brother', 'brothers');
+insert into nouns (word, plural) values ('president', 'presidents');
+insert into nouns (word, plural) values ('chef', 'chefs');
+insert into nouns (word, plural) values ('soldier', 'soldiers');
+insert into nouns (word, plural) values ('engineer', 'engineers');
+insert into nouns (word, plural) values ('scientist', 'scientists');
+insert into nouns (word, plural) values ('astronaut', 'astronauts');
+insert into nouns (word, plural) values ('artist', 'artists');
+insert into nouns (word, plural) values ('computer', 'computers');
+insert into nouns (word, plural) values ('robot', 'robots');
+insert into nouns (word, plural) values ('shark', 'sharks');
+insert into nouns (word, plural) values ('whale', 'whales');
+insert into nouns (word, plural) values ('dolphin', 'dolphins');
+insert into nouns (word, plural) values ('butterfly', 'butterflies');
+insert into nouns (word, plural) values ('spider', 'spiders');
+insert into nouns (word, plural) values ('chicken', 'chickens');
+insert into nouns (word, plural) values ('cow', 'cows');
+insert into nouns (word, plural) values ('horse', 'horses');
+insert into nouns (word, plural) values ('plane', 'planes');
+insert into nouns (word, plural) values ('bicycle', 'bicycles');
+insert into nouns (word, plural) values ('phone', 'phones');
+insert into nouns (word, plural) values ('camera', 'cameras');
+insert into nouns (word, plural) values ('clock', 'clocks');
+insert into nouns (word, plural) values ('television', 'televisions');
 insert into verbs (word, regular, past, present, future) values ('walk', 1,'walked', 'walks', 'will walk');
 insert into verbs (word, regular, past, present, future) values ('talk', 1,'talked', 'talks', 'will talk');
 insert into verbs (word, regular, past, present, future) values ('play', 1,'played', 'plays', 'will play');

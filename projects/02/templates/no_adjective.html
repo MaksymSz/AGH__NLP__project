@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Noun without adjective</title>
+</head>
+<body>
+    <h1>Build an english sentence</h1>
+   <form method="POST">
+        <label for="noun_form">Choose the form of the noun:</label>
+        <select name="noun_form" id="noun_form">
+            <option value="singular" {% if noun_form == 'singular' %} selected {% endif %}>Singular</option>
+            <option value="plural" {% if noun_form == 'plural' %} selected {% endif %}>Plural</option>
+        </select>
+       <br>
+       {% if noun_form %}
+            <label for="noun">Choose a noun:</label>
+            <select name="noun" id="noun">
+                {% for noun in available_nouns %}
+                    <option value="{{ noun }}">{{ noun }}</option>
+                {% endfor %}
+            </select>
+        {% endif %}
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

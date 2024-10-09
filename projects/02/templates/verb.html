@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Verb</title>
+</head>
+<body>
+    <h1>Build an english sentence</h1>
+   <form method="POST">
+        <label for="verb_tense">Choose the tense of the verb:</label>
+        <select name="verb_tense" id="verb_tense">
+            <option value="past" {% if verb_tense == 'past' %} selected {% endif %}>Past</option>
+            <option value="present" {% if verb_tense == 'present' %} selected {% endif %}>Present</option>
+            <option value="future" {% if verb_tense == 'future' %} selected {% endif %}>Future</option>
+        </select>
+       <br>
+       {% if verb_tense %}
+            <label for="verb">Choose a verb:</label>
+            <select name="verb" id="verb">
+                {% for verb in available_verbs %}
+                    <option value="{{ verb }}">{{ verb }}</option>
+                {% endfor %}
+            </select>
+        {% endif %}
+        <br>
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>

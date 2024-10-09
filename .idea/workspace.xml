@@ -4,9 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c413b3db-fe5e-4a9a-bcb3-03b3746a772d" name="Changes" comment="Fetch data script">
-      <change afterPath="$PROJECT_DIR$/projects/01/task_01.py" afterDir="false" />
+    <list default="true" id="c413b3db-fe5e-4a9a-bcb3-03b3746a772d" name="Changes" comment="Readme.md update">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/02/sentence_builder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/02/templates/add_more.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/02/templates/adders.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/02/templates/adverb.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/02/templates/determiner.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/02/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/02/templates/no_adjective.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/02/templates/noun.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/02/templates/pronoun.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/02/templates/sentence.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/02/templates/verb.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/02/templates/with_adjective.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/01/parse_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/01/parse_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/02/init_db" beforeDir="false" afterPath="$PROJECT_DIR$/projects/02/init_db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/02/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/02/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/02/words.sql" beforeDir="false" afterPath="$PROJECT_DIR$/projects/02/words.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +32,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
-        <option value="SQL File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -41,27 +55,39 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2mpwU8j5oVSfAoGLTE4id0aqUTB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.kkkk.executor": "Run",
+    "JavaScript Debug.adverb.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.index2.html.executor": "Run",
+    "JavaScript Debug.no_adjective.html.executor": "Run",
+    "JavaScript Debug.noun.html.executor": "Run",
+    "JavaScript Debug.pronoun.html.executor": "Run",
+    "JavaScript Debug.sentence.html.executor": "Run",
+    "JavaScript Debug.with_adjective.html.executor": "Run",
+    "Python.fetch_data.executor": "Run",
     "Python.main.executor": "Run",
-    "Python.sentence_creator.executor": "Run",
-    "Python.tmp (1).executor": "Run",
+    "Python.parse_data.executor": "Run",
+    "Python.sentence_builder.executor": "Run",
+    "Python.sentence_generation.executor": "Run",
     "Python.tmp.executor": "Run",
+    "Python.utils.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
+    "last.edited.regexp": "",
+    "last_opened_file_path": "C:/Users/Adam/Pulpit/STUDIA/PROJECTS/nlp-course-projects/projects/02/words.sql",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -72,35 +98,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Maksym\PycharmProjects\nlp course projects\data" />
+      <recent name="C:\Users\Adam\Pulpit\STUDIA\PROJECTS\nlp-course-projects\projects\data" />
       <recent name="C:\Users\Maksym\PycharmProjects\nlp course projects\projects\01" />
       <recent name="C:\Users\Maksym\PycharmProjects\nlp course projects\utils" />
+      <recent name="C:\Users\Maksym\PycharmProjects\nlp course projects\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.sentence_creator">
-    <configuration name="kkkk" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="nlp course projects" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projects/02" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/02/kkkk.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="nlp course projects" />
       <option name="ENV_FILES" value="" />
@@ -116,52 +120,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sentence_creator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="nlp course projects" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projects/02" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/02/sentence_creator.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tmp (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="nlp course projects" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projects/02" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/02/tmp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -195,9 +153,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.sentence_creator" />
-        <item itemvalue="Python.tmp (1)" />
-        <item itemvalue="Python.kkkk" />
         <item itemvalue="Python.tmp" />
       </list>
     </recent_temporary>
@@ -205,8 +160,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
-        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
@@ -221,9 +176,9 @@
       <workItem from="1727786841815" duration="3705000" />
       <workItem from="1727801803668" duration="4000" />
       <workItem from="1727814727365" duration="2223000" />
-      <workItem from="1727857416006" duration="1247000" />
-      <workItem from="1728393125058" duration="4932000" />
-      <workItem from="1728406506901" duration="6427000" />
+      <workItem from="1727858429720" duration="1384000" />
+      <workItem from="1728031193043" duration="16081000" />
+      <workItem from="1728500997701" duration="13832000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
@@ -257,15 +212,7 @@
       <option name="project" value="LOCAL" />
       <updated>1727789236398</updated>
     </task>
-    <task id="LOCAL-00005" summary="Fetch data script">
-      <option name="closed" value="true" />
-      <created>1727857660951</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1727857660951</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,25 +232,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
     <MESSAGE value="Readme.md update" />
-    <MESSAGE value="Fetch data script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fetch data script" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="Readme.md update" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/nlp_course_projects$tmp__1_.coverage" NAME="tmp (1) Coverage Results" MODIFIED="1728413921287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/02" />
+    <SUITE FILE_PATH="coverage/nlp_course_projects$utils.coverage" NAME="utils Coverage Results" MODIFIED="1728482803616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/02" />
+    <SUITE FILE_PATH="coverage/nlp_course_projects$main.coverage" NAME="main Coverage Results" MODIFIED="1728482787245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/nlp_course_projects$tmp.coverage" NAME="tmp Coverage Results" MODIFIED="1727815126216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/01" />
-    <SUITE FILE_PATH="coverage/nlp_course_projects$sentence_creator.coverage" NAME="sentence_creator Coverage Results" MODIFIED="1728415269610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/02" />
-    <SUITE FILE_PATH="coverage/nlp_course_projects$main.coverage" NAME="main Coverage Results" MODIFIED="1727789218114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/nlp_course_projects$kkkk.coverage" NAME="kkkk Coverage Results" MODIFIED="1728397961331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/02" />
+    <SUITE FILE_PATH="coverage/nlp_course_projects$fetch_data.coverage" NAME="fetch_data Coverage Results" MODIFIED="1728034576989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/01" />
+    <SUITE FILE_PATH="coverage/nlp_course_projects$parse_data.coverage" NAME="parse_data Coverage Results" MODIFIED="1728049722971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/01" />
+    <SUITE FILE_PATH="coverage/nlp_course_projects$sentence_builder.coverage" NAME="sentence_builder Coverage Results" MODIFIED="1728514808206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/02" />
+    <SUITE FILE_PATH="coverage/nlp_course_projects$sentence_generation.coverage" NAME="sentence_generation Coverage Results" MODIFIED="1728484018611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/02" />
   </component>
 </project>

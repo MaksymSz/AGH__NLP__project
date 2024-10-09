@@ -22,7 +22,7 @@ def count_freq_of_words_in_text(text: str) -> dict[str, int]:
     cleared_txt = clear_text_from_punctuation(text)
     items = cleared_txt.split()
     freq_of_words = dict(Counter(items))
-    return dict(sorted(freq_of_words.items(), key=lambda x: x[1], reverse=True))
+    return dict(sorted(freq_of_words.items(), key=lambda x: x[1]))
 
 
 # zwraca dict ze słowem i listą słów które po nim występują (tak może uniknie się powtórzeń połączeń w grafie)
@@ -64,16 +64,16 @@ def main() -> None:
         print(f'{k}     {r}     {v}     {r * v} ')
         r += 1
 
-    # exercise 2
-    neighbours = get_neighbours(italian_text)
-    for k, v in neighbours.items():
-        print(k, len(set(v)), len(v))
-
-    # exercise 3
-    perc = percentage_of_language(italian_freq)
-    for k, v in perc.items():
-        if k < 60:
-            print(f'{k}%', v)
+    # # exercise 2
+    # neighbours = get_neighbours(italian_text)
+    # for k, v in neighbours.items():
+    #     print(k, len(v))
+    #
+    # # exercise 3
+    # perc = percentage_of_language(italian_freq)
+    # for k, v in perc.items():
+    #     if k < 60:
+    #         print(f'{k}%', v)
 
 
 if __name__ == "__main__":

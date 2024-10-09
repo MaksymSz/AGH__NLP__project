@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <title>Adverb</title>
+</head>
+<body>
+    <h1>Build an english sentence</h1>
+    <form method="POST">
+        <h2>Choose an adverb</h2>
+        <select name="opt">
+    {% for p in words['adverbs'] %}
+        <option value="{{ p[0] }}"> {{ p[0] }} </option>
+        <br>
+    {% endfor %}
+        </select>
+        <button type="submit">Next</button>
+    </form>
+    <a href="/">Wróć do strony głównej</a>
+</body>
+</html>

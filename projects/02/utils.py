@@ -49,3 +49,24 @@ def get_words(limit=1):
     #     print(x)
 
     return result
+
+
+def get_all_words():
+    grouped_words = {}
+    conn = sqlite3.connect('words.sql')
+    cursor = conn.cursor()
+    cursor.execute("select word from pronouns")
+    grouped_words['pronouns'] = cursor.fetchall()
+    cursor.execute("select * from nouns")
+    grouped_words['nouns'] = cursor.fetchall()
+    cursor.execute("select word from adjectives")
+    grouped_words['adjectives'] = cursor.fetchall()
+    cursor.execute("select word from adverbs")
+    grouped_words['adverbs'] = cursor.fetchall()
+    cursor.execute("select * from verbs")
+    grouped_words['verbs'] = cursor.fetchall()
+    cursor.execute("select word from determiners")
+    grouped_words['determiners'] = cursor.fetchall()
+    return grouped_words
+
+
