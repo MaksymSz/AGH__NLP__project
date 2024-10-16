@@ -1,15 +1,26 @@
 <html>
 <head>
     <title>Verb</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css')}}">
 </head>
 <body>
     <h1>Build an english sentence</h1>
-   <form method="POST">
+    <img src="../static/images/uk_flag.png" alt="uk_flag"/>
+    <form method="POST">
         <label for="verb_tense">Choose the tense of the verb:</label>
         <select name="verb_tense" id="verb_tense">
-            <option value="past" {% if verb_tense == 'past' %} selected {% endif %}>Past</option>
-            <option value="present" {% if verb_tense == 'present' %} selected {% endif %}>Present</option>
-            <option value="future" {% if verb_tense == 'future' %} selected {% endif %}>Future</option>
+            <option value="past simple" {% if verb_tense == 'past simple' %} selected {% endif %}>Past Simple</option>
+            <option value="past continuous" {% if verb_tense == 'past continuous' %} selected {% endif %}>Past Continuous</option>
+            <option value="past perfect" {% if verb_tense == 'past perfect' %} selected {% endif %}>Past Perfect</option>
+            <option value="past perfect continuous" {% if verb_tense == 'past perfect continuous' %} selected {% endif %}>Past Perfect Continuous</option>
+            <option value="present simple" {% if verb_tense == 'present simple' %} selected {% endif %}>Present Simple</option>
+            <option value="present continuous" {% if verb_tense == 'present continuous' %} selected {% endif %}>Present Continuous</option>
+            <option value="present perfect" {% if verb_tense == 'present perfect' %} selected {% endif %}>Present Perfect</option>
+            <option value="present perfect continuous" {% if verb_tense == 'present perfect continuous' %} selected {% endif %}>Present Perfect Continuous</option>
+            <option value="future simple" {% if verb_tense == 'future simple' %} selected {% endif %}>Future Simple</option>
+            <option value="future continuous" {% if verb_tense == 'future continuous' %} selected {% endif %}>Future Continuous</option>
+            <option value="future perfect" {% if verb_tense == 'future perfect' %} selected {% endif %}>Future Perfect</option>
+            <option value="future perfect continuous" {% if verb_tense == 'future perfect continuous' %} selected {% endif %}>Future Perfect Continuous</option>
         </select>
        <br>
        {% if verb_tense %}

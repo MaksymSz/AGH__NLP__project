@@ -1,33 +1,35 @@
 <html>
 <head>
     <title>Noun with adjective</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css')}}">
 </head>
 <body>
     <h1>Build an english sentence</h1>
-   <form method="POST">
+    <img src="../static/images/uk_flag.png" alt="uk_flag"/>
+    <form method="POST">
         <label for="noun_form">Choose the form of the noun:</label>
-       <select name="noun_form" id="noun_form">
+        <select name="noun_form" id="noun_form">
             <option value="singular" {% if noun_form == 'singular' %} selected {% endif %}>Singular</option>
             <option value="plural" {% if noun_form == 'plural' %} selected {% endif %}>Plural</option>
         </select>
-       <br>
-       {% if noun_form %}
-            <label for="noun">Choose a noun:</label>
-            <select name="noun" id="noun">
-                {% for noun in available_nouns %}
-                    <option value="{{ noun }}">{{ noun }}</option>
-                {% endfor %}
-            </select>
-            <br>
-           <label for="adjective">Choose an adjective:</label>
-           <select name="adjective" id="adjective">
-                    {% for adjective in available_adjectives %}
-                        <option value="{{ adjective }}">{{ adjective }}</option>
-                    {% endfor %}
-           </select>
            <br>
-        {% endif %}
-        <button type="submit">Submit</button>
+           {% if noun_form %}
+                <label for="noun">Choose a noun:</label>
+                <select name="noun" id="noun">
+                    {% for noun in available_nouns %}
+                        <option value="{{ noun }}">{{ noun }}</option>
+                    {% endfor %}
+                </select>
+                <br>
+               <label for="adjective">Choose an adjective:</label>
+               <select name="adjective" id="adjective">
+                        {% for adjective in available_adjectives %}
+                            <option value="{{ adjective }}">{{ adjective }}</option>
+                        {% endfor %}
+               </select>
+               <br>
+            {% endif %}
+            <button type="submit">Next</button>
     </form>
 </body>
 </html>

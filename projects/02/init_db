@@ -10,7 +10,9 @@ create table if not exists verbs(
     word varchar,
     past varchar,
     present varchar,
-    future varchar
+    future varchar,
+    continuous varchar,
+    perfect varchar
 );
 
 create table if not exists prepositional(
@@ -30,7 +32,8 @@ create table if not exists adjectives(
 
 create table if not exists determiners(
     id integer primary key autoincrement,
-    word varchar
+    word varchar,
+    type varchar
 );
 
 create table if not exists pronouns(
@@ -58,15 +61,96 @@ insert into adjectives (word) values ('young');
 insert into adjectives (word) values ('new');
 insert into adjectives (word) values ('round');
 insert into adjectives (word) values ('tall');
+insert into adjectives (word) values ('bright');
+insert into adjectives (word) values ('dark');
+insert into adjectives (word) values ('soft');
+insert into adjectives (word) values ('hard');
+insert into adjectives (word) values ('warm');
+insert into adjectives (word) values ('cold');
+insert into adjectives (word) values ('quiet');
+insert into adjectives (word) values ('loud');
+insert into adjectives (word) values ('heavy');
+insert into adjectives (word) values ('light');
+insert into adjectives (word) values ('clean');
+insert into adjectives (word) values ('dirty');
+insert into adjectives (word) values ('short');
+insert into adjectives (word) values ('thin');
+insert into adjectives (word) values ('thick');
+insert into adjectives (word) values ('strong');
+insert into adjectives (word) values ('weak');
+insert into adjectives (word) values ('happy');
+insert into adjectives (word) values ('sad');
+insert into adjectives (word) values ('shiny');
+insert into adjectives (word) values ('dull');
+insert into adjectives (word) values ('sweet');
+insert into adjectives (word) values ('sour');
+insert into adjectives (word) values ('brave');
+insert into adjectives (word) values ('calm');
+insert into adjectives (word) values ('fresh');
+insert into adjectives (word) values ('dry');
+insert into adjectives (word) values ('wet');
+insert into adjectives (word) values ('bitter');
+insert into adjectives (word) values ('gentle');
 
-insert into determiners (word) values ('an');
-insert into determiners (word) values ('this');
-insert into determiners (word) values ('that');
-insert into determiners (word) values ('these');
-insert into determiners (word) values ('those');
-insert into determiners (word) values ('my');
-insert into determiners (word) values ('your');
-insert into determiners (word) values ('their');
+insert into determiners (word, type) values ('a', 'article');
+insert into determiners (word, type) values ('an', 'article');
+insert into determiners (word, type) values ('the', 'article');
+insert into determiners (word, type) values ('this', 'demonstrative');
+insert into determiners (word, type) values ('that', 'demonstrative');
+insert into determiners (word, type) values ('these', 'demonstrative');
+insert into determiners (word, type) values ('those', 'demonstrative');
+insert into determiners (word, type) values ('my', 'possessive');
+insert into determiners (word, type) values ('your', 'possessive');
+insert into determiners (word, type) values ('his', 'possessive');
+insert into determiners (word, type) values ('her', 'possessive');
+insert into determiners (word, type) values ('its', 'possessive');
+insert into determiners (word, type) values ('our', 'possessive');
+insert into determiners (word, type) values ('their', 'possessive');
+insert into determiners (word, type) values ('few', 'quantifier');
+insert into determiners (word, type) values ('little', 'quantifier');
+insert into determiners (word, type) values ('many', 'quantifier');
+insert into determiners (word, type) values ('much', 'quantifier');
+insert into determiners (word, type) values ('a lot of', 'quantifier');
+insert into determiners (word, type) values ('lots of', 'quantifier');
+insert into determiners (word, type) values ('most', 'quantifier');
+insert into determiners (word, type) values ('some', 'quantifier');
+insert into determiners (word, type) values ('all', 'quantifier');
+insert into determiners (word, type) values ('any', 'quantifier');
+insert into determiners (word, type) values ('every', 'quantifier');
+insert into determiners (word, type) values ('one', 'number');
+insert into determiners (word, type) values ('two', 'number');
+insert into determiners (word, type) values ('three', 'number');
+insert into determiners (word, type) values ('four', 'number');
+insert into determiners (word, type) values ('five', 'number');
+insert into determiners (word, type) values ('six', 'number');
+insert into determiners (word, type) values ('seven', 'number');
+insert into determiners (word, type) values ('eight', 'number');
+insert into determiners (word, type) values ('nine', 'number');
+insert into determiners (word, type) values ('ten', 'number');
+insert into determiners (word, type) values ('eleven', 'number');
+insert into determiners (word, type) values ('twelve', 'number');
+insert into determiners (word, type) values ('thirteen', 'number');
+insert into determiners (word, type) values ('fourteen', 'number');
+insert into determiners (word, type) values ('fifteen', 'number');
+insert into determiners (word, type) values ('sixteen', 'number');
+insert into determiners (word, type) values ('seventeen', 'number');
+insert into determiners (word, type) values ('eighteen', 'number');
+insert into determiners (word, type) values ('nineteen', 'number');
+insert into determiners (word, type) values ('twenty', 'number');
+insert into determiners (word, type) values ('thirty', 'number');
+insert into determiners (word, type) values ('forty', 'number');
+insert into determiners (word, type) values ('fifty', 'number');
+insert into determiners (word, type) values ('sixty', 'number');
+insert into determiners (word, type) values ('seventy', 'number');
+insert into determiners (word, type) values ('eighty', 'number');
+insert into determiners (word, type) values ('ninety', 'number');
+insert into determiners (word, type) values ('hundred', 'number');
+insert into determiners (word, type) values ('thousand', 'number');
+insert into determiners (word, type) values ('million', 'number');
+insert into determiners (word, type) values ('billion', 'number');
+
+
+
 
 insert into prepositional (word) values ('in');
 insert into prepositional (word) values ('on');
@@ -148,53 +232,53 @@ insert into nouns (word, plural) values ('phone', 'phones');
 insert into nouns (word, plural) values ('camera', 'cameras');
 insert into nouns (word, plural) values ('clock', 'clocks');
 insert into nouns (word, plural) values ('television', 'televisions');
-insert into verbs (word, regular, past, present, future) values ('walk', 1,'walked', 'walks', 'will walk');
-insert into verbs (word, regular, past, present, future) values ('talk', 1,'talked', 'talks', 'will talk');
-insert into verbs (word, regular, past, present, future) values ('play', 1,'played', 'plays', 'will play');
-insert into verbs (word, regular, past, present, future) values ('help', 1,'helped', 'helps', 'will help');
-insert into verbs (word, regular, past, present, future) values ('open', 1,'opened', 'opens', 'will open');
-insert into verbs (word, regular, past, present, future) values ('clean', 1,'cleaned', 'cleans', 'will clean');
-insert into verbs (word, regular, past, present, future) values ('paint', 1,'painted', 'paints', 'will paint');
-insert into verbs (word, regular, past, present, future) values ('study', 1,'studied', 'studies', 'will study');
-insert into verbs (word, regular, past, present, future) values ('watch', 1,'watched', 'watches', 'will watch');
-insert into verbs (word, regular, past, present, future) values ('fix', 1,'fixed', 'fixes', 'will fix');
-insert into verbs (word, regular, past, present, future) values ('go', 0,'went', 'goes', 'will go');
-insert into verbs (word, regular, past, present, future) values ('eat', 0,'ate', 'eats', 'will eat');
-insert into verbs (word, regular, past, present, future) values ('write', 0,'wrote', 'writes', 'will write');
-insert into verbs (word, regular, past, present, future) values ('read', 0,'read', 'reads', 'will read');
-insert into verbs (word, regular, past, present, future) values ('sing', 0,'sang', 'sings', 'will sing');
-insert into verbs (word, regular, past, present, future) values ('run', 0,'ran', 'runs', 'will run');
-insert into verbs (word, regular, past, present, future) values ('drink', 0,'drank', 'drinks', 'will drink');
-insert into verbs (word, regular, past, present, future) values ('drive', 0,'drove', 'drives', 'will drive');
-insert into verbs (word, regular, past, present, future) values ('catch', 0,'caught', 'catches', 'will catch');
-insert into verbs (word, regular, past, present, future) values ('bring', 0,'brought', 'brings', 'will bring');
-insert into verbs (word, regular, past, present, future) values ('call', 1,'called', 'calls', 'will call');
-insert into verbs (word, regular, past, present, future) values ('close', 1,'closed', 'closes', 'will close');
-insert into verbs (word, regular, past, present, future) values ('dance', 1,'danced', 'dances', 'will dance');
-insert into verbs (word, regular, past, present, future) values ('jump', 1,'jumped', 'jumps', 'will jump');
-insert into verbs (word, regular, past, present, future) values ('cook', 1,'cooked', 'cooks', 'will cook');
-insert into verbs (word, regular, past, present, future) values ('smile', 1,'smiled', 'smiles', 'will smile');
-insert into verbs (word, regular, past, present, future) values ('brush', 1,'brushed', 'brushes', 'will brush');
-insert into verbs (word, regular, past, present, future) values ('wait', 1,'waited', 'waits', 'will wait');
-insert into verbs (word, regular, past, present, future) values ('laugh', 1,'laughed', 'laughs', 'will laugh');
-insert into verbs (word, regular, past, present, future) values ('climb', 1,'climbed', 'climbs', 'will climb');
-insert into verbs (word, regular, past, present, future) values ('see', 0,'saw', 'sees', 'will see');
-insert into verbs (word, regular, past, present, future) values ('make', 0,'made', 'makes', 'will make');
-insert into verbs (word, regular, past, present, future) values ('give', 0,'gave', 'gives', 'will give');
-insert into verbs (word, regular, past, present, future) values ('stand', 0,'stood', 'stands', 'will stand');
-insert into verbs (word, regular, past, present, future) values ('fall', 0,'fell', 'falls', 'will fall');
-insert into verbs (word, regular, past, present, future) values ('feel', 0,'felt', 'feels', 'will feel');
-insert into verbs (word, regular, past, present, future) values ('hear', 0,'heard', 'hears', 'will hear');
-insert into verbs (word, regular, past, present, future) values ('teach', 0,'taught', 'teaches', 'will teach');
-insert into verbs (word, regular, past, present, future) values ('tell', 0,'told', 'tells', 'will tell');
-insert into verbs (word, regular, past, present, future) values ('break', 0,'broke', 'breaks', 'will break');
-insert into verbs (word, regular, past, present, future) values ('swim', 0,'swam', 'swims', 'will swim');
-insert into verbs (word, regular, past, present, future) values ('draw', 0,'drew', 'draws', 'will draw');
-insert into verbs (word, regular, past, present, future) values ('hit', 0,'hit', 'hits', 'will hit');
-insert into verbs (word, regular, past, present, future) values ('buy', 1,'bought', 'buys', 'will buy');
-insert into verbs (word, regular, past, present, future) values ('sell', 0,'sold', 'sells', 'will sell');
-insert into verbs (word, regular, past, present, future) values ('ride', 0,'rode', 'rides', 'will ride');
-insert into verbs (word, regular, past, present, future) values ('think', 0,'thought', 'thinks', 'will think');
-insert into verbs (word, regular, past, present, future) values ('sleep', 0,'slept', 'sleeps', 'will sleep');
-insert into verbs (word, regular, past, present, future) values ('dig', 0,'dug', 'digs', 'will dig');
-insert into verbs (word, regular, past, present, future) values ('win', 0,'won', 'wins', 'will win');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('walk', 1,'walked', 'walks', 'will walk', 'walking', 'walked');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('talk', 1,'talked', 'talks', 'will talk', 'talking', 'talked');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('play', 1,'played', 'plays', 'will play', 'playing', 'played');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('help', 1,'helped', 'helps', 'will help', 'helping', 'helped');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('open', 1,'opened', 'opens', 'will open', 'opening', 'opened');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('clean', 1,'cleaned', 'cleans', 'will clean', 'cleaning', 'cleaned');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('paint', 1,'painted', 'paints', 'will paint', 'painting', 'painted');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('study', 1,'studied', 'studies', 'will study', 'studying', 'studied');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('watch', 1,'watched', 'watches', 'will watch', 'watching', 'watched');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('fix', 1,'fixed', 'fixes', 'will fix', 'fixing', 'fixed');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('go', 0,'went', 'goes', 'will go', 'going', 'gone');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('eat', 0,'ate', 'eats', 'will eat', 'eating', 'eaten');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('write', 0,'wrote', 'writes', 'will write', 'writing', 'written');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('read', 0,'read', 'reads', 'will read', 'reading', 'read');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('sing', 0,'sang', 'sings', 'will sing', 'singing', 'sung');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('run', 0,'ran', 'runs', 'will run', 'running', 'run');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('drink', 0,'drank', 'drinks', 'will drink', 'drinking', 'drunk');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('drive', 0,'drove', 'drives', 'will drive', 'driving', 'driven');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('catch', 0,'caught', 'catches', 'will catch', 'catching', 'caught');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('bring', 0,'brought', 'brings', 'will bring', 'bringing', 'brought');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('call', 1,'called', 'calls', 'will call', 'calling', 'called');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('close', 1,'closed', 'closes', 'will close', 'closing', 'closed');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('dance', 1,'danced', 'dances', 'will dance', 'dancing', 'danced');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('jump', 1,'jumped', 'jumps', 'will jump', 'jumping', 'jumped');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('cook', 1,'cooked', 'cooks', 'will cook', 'cooking', 'cooked');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('smile', 1,'smiled', 'smiles', 'will smile', 'smiling', 'smiled');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('brush', 1,'brushed', 'brushes', 'will brush', 'brushing', 'brushed');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('wait', 1,'waited', 'waits', 'will wait', 'waiting', 'waited');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('laugh', 1,'laughed', 'laughs', 'will laugh', 'laughing', 'laughed');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('climb', 1,'climbed', 'climbs', 'will climb', 'climbing', 'climbed');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('see', 0,'saw', 'sees', 'will see', 'seeing', 'seen');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('make', 0,'made', 'makes', 'will make', 'making', 'made');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('give', 0,'gave', 'gives', 'will give', 'giving', 'given');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('stand', 0,'stood', 'stands', 'will stand', 'standing', 'stood');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('fall', 0,'fell', 'falls', 'will fall', 'falling', 'fallen');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('feel', 0,'felt', 'feels', 'will feel', 'felling', 'felt');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('hear', 0,'heard', 'hears', 'will hear', 'hearing', 'heard');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('teach', 0,'taught', 'teaches', 'will teach', 'teaching', 'taught');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('tell', 0,'told', 'tells', 'will tell', 'telling', 'told');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('break', 0,'broske', 'breaks', 'will break', 'breaking', 'broken');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('swim', 0,'swam', 'swims', 'will swim', 'swimming', 'swum');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('draw', 0,'drew', 'draws', 'will draw', 'drawing', 'drawn');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('hit', 0,'hit', 'hits', 'will hit', 'hitting', 'hit');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('buy', 1,'bought', 'buys', 'will buy', 'buying', 'bought');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('sell', 0,'sold', 'sells', 'will sell', 'selling', 'sold');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('ride', 0,'rode', 'rides', 'will ride', 'riding', 'ridden');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('think', 0,'thought', 'thinks', 'will think', 'thinking', 'thought');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('sleep', 0,'slept', 'sleeps', 'will sleep', 'sleeping', 'slept');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('dig', 0,'dug', 'digs', 'will dig', 'digging', 'dug');
+insert into verbs (word, regular, past, present, future, continuous, perfect) values ('win', 0,'won', 'wins', 'will win', 'winning', 'wun');

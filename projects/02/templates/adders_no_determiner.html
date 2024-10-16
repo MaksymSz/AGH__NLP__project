@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Adders</title>
+    <title>Adders no determiner</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css')}}">
 </head>
 <body>
@@ -13,10 +13,6 @@
            <select name="adder" id="adder">
             <option value="nothing" {% if adder == 'nothing' %} selected {% endif %}>Nothing</option>
             <option value="adverb" {% if adder == 'adverb' %} selected {% endif %}>Adverb</option>
-            <option value="article" {% if adder == 'article' %} selected {% endif %}>Article</option>
-            <option value="possessive" {% if adder == 'possessive' %} selected {% endif %}>Possessive</option>
-            <option value="quantifier" {% if adder == 'quantifier' %} selected {% endif %}>Quantifier</option>
-            <option value="number" {% if adder == 'number' %} selected {% endif %}>Number</option>
             <option value="preposition" {% if adder == 'preposition' %} selected {% endif %}>Preposition</option>
         </select>
         <br>

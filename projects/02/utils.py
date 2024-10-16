@@ -65,8 +65,10 @@ def get_all_words():
     grouped_words['adverbs'] = cursor.fetchall()
     cursor.execute("select * from verbs")
     grouped_words['verbs'] = cursor.fetchall()
-    cursor.execute("select word from determiners")
+    cursor.execute("select * from determiners")
     grouped_words['determiners'] = cursor.fetchall()
+    cursor.execute("select word from prepositional")
+    grouped_words['prepositions'] = cursor.fetchall()
     return grouped_words
 
 

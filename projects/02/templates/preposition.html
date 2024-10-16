@@ -1,13 +1,13 @@
 <html lang="en">
 <head>
-    <title>Determiner</title>
+    <title>Preposition</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css')}}">
 </head>
 <body>
     <h1>Build an english sentence</h1>
     <img src="../static/images/uk_flag.png" alt="uk_flag"/>
     <form method="POST">
-        <h2>Choose a determiner</h2>
+        <h2>Choose a preposition</h2>
         <select name="opt">
     {% for p in words %}
         <option value="{{ p }}"> {{ p }} </option>

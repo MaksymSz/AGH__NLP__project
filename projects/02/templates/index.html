@@ -1,23 +1,23 @@
 <html>
   <head>
     <title>Sentence builder</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css')}}">
   </head>
 <body>
-  <h1>Sentence builder</h1>
   <h1>Build an english sentence</h1>
+  <img src="../static/images/uk_flag.png" alt="uk_flag"/>
   <form method="POST">
-      <p>
-        <!-- wyświetlamy treść pytania -->
-      <h2> 1. Choose noun or pronoun </h2>
+      <h2> Choose noun or pronoun </h2>
+      <div class="radio_buttons">
           <label>
-            <input type="radio" value="pronoun" name="opt"> pronoun
+            <input type="radio" value="pronoun" name="opt"> Pronoun
           </label>
         <br>
           <label>
-            <input type="radio" value="noun" name="opt"> noun
+            <input type="radio" value="noun" name="opt"> Noun
           </label>
         <br>
-      </p>
+      </div>
       <button type="submit">Next</button>
     </form>
 </body>

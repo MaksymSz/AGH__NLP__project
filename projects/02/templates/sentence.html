@@ -1,9 +1,11 @@
 <html>
   <head>
     <title>Setence</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css')}}">
   </head>
 <body>
   <h1>Your sentence:</h1>
+  <img src="../static/images/uk_flag.png" alt="uk_flag"/>
   <h2 style="color:DarkBlue;"> {{ sentence }}</h2>
   <a href="/">Nice sentence! Try again :)</a>
 </body>

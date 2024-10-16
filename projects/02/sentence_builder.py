@@ -1,18 +1,19 @@
 from flask import Flask, render_template, request, redirect, url_for
 import utils
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 skeleton = {
     "D_0": "",
     "Adj_0": "",
     "N_0": "",
-    "Adv": "",
     "V": "",
+    "P": "",
     "D_1": "",
     "Adj_1": "",
     "N_1": "",
-    "TENSE": ""
+    "Adv": "",
+    "TEMP": ""
 }
 
 english_words = utils.get_all_words()
@@ -20,6 +21,8 @@ english_words = utils.get_all_words()
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    for k in skeleton.keys():
+        skeleton[k] = ""
     if request.method == 'POST':
         selected_page = request.form.get('opt')
         if selected_page == 'noun':
@@ -78,7 +81,7 @@ def no_adjective():
 def pronoun():
     if request.method == 'POST':
         skeleton['N_0'] = request.form.get('opt')
-        return redirect(url_for('adders'))
+        return redirect(url_for('adders_no_determiner'))
     return render_template('pronoun.html', words=english_words)
 
 
@@ -86,20 +89,53 @@ def pronoun():
 def verb():
     noun_or_pronoun = skeleton['N_0']
     nouns_with_s_verb = ['it', 'she', 'he'] + [noun[1] for noun in english_words['nouns']]
+    nouns_with_was_verb = ['I', 'it', 'she', 'he'] + [noun[1] for noun in english_words['nouns']]
     tense = None
     word = None
     verbs = []
     if request.method == 'POST':
         tense = request.form.get('verb_tense')
-        if tense == 'past':
+        if tense == 'past simple':
             verbs = [e[3] for e in english_words['verbs']]
-        elif tense == 'present':
+        elif tense == 'past continuous':
+            if noun_or_pronoun not in nouns_with_was_verb:
+                verbs = ['were ' + e[6] for e in english_words['verbs']]
+            else:
+                verbs = ['was ' + e[6] for e in english_words['verbs']]
+        elif tense == 'past perfect':
+            verbs = ['had ' + e[7] for e in english_words['verbs']]
+        elif tense == 'past perfect continuous':
+            verbs = ['had been ' + e[6] for e in english_words['verbs']]
+        elif tense == 'present simple':
             if noun_or_pronoun not in nouns_with_s_verb:
                 verbs = [e[2] for e in english_words['verbs']]
             else:
                 verbs = [e[4] for e in english_words['verbs']]
-        elif tense == 'future':
+        elif tense == 'present continuous':
+            if noun_or_pronoun == 'I':
+                verbs = ['am ' + e[6] for e in english_words['verbs']]
+            elif noun_or_pronoun in nouns_with_s_verb:
+                verbs = ['is ' + e[6] for e in english_words['verbs']]
+            else:
+                verbs = ['are ' + e[6] for e in english_words['verbs']]
+        elif tense == 'present perfect':
+            if noun_or_pronoun not in nouns_with_s_verb:
+                verbs = ['have ' + e[7] for e in english_words['verbs']]
+            else:
+                verbs = ['has ' + e[7] for e in english_words['verbs']]
+        elif tense == 'present perfect continuous':
+            if noun_or_pronoun not in nouns_with_s_verb:
+                verbs = ['have been ' + e[6] for e in english_words['verbs']]
+            else:
+                verbs = ['has been ' + e[6] for e in english_words['verbs']]
+        elif tense == 'future simple':
             verbs = [e[5] for e in english_words['verbs']]
+        elif tense == 'future continuous':
+            verbs = ['will be ' + e[6] for e in english_words['verbs']]
+        elif tense == 'future perfect':
+            verbs = ['will have ' + e[7] for e in english_words['verbs']]
+        elif tense == 'future perfect continuous':
+            verbs = ['will have been ' + e[6] for e in english_words['verbs']]
         skeleton['V'] = request.form.get('verb')
         word = request.form.get('verb')
         if word is not None:
@@ -113,24 +149,51 @@ def adders():
         selected_page = request.form.get('adder')
         if selected_page == 'adverb':
             return redirect(url_for('adverb'))
-        elif selected_page == 'no_adjective':
+        elif selected_page in ['article', 'possessive', 'quantifier', 'number']:
+            skeleton['TEMP'] = selected_page
             return redirect(url_for('determiner'))
+        elif selected_page == 'preposition':
+            return redirect(url_for('preposition'))
         elif selected_page == 'nothing':
             return redirect(url_for('verb'))
     return render_template('adders.html')
+
+@app.route('/adders_no_determiner', methods=['GET', 'POST'])
+def adders_no_determiner():
+    if request.method == 'POST':
+        selected_page = request.form.get('adder')
+        if selected_page == 'adverb':
+            return redirect(url_for('adverb'))
+        elif selected_page == 'preposition':
+            return redirect(url_for('preposition'))
+        elif selected_page == 'nothing':
+            return redirect(url_for('verb'))
+    return render_template('adders_no_determiner.html')
 
 
 @app.route('/adverb', methods=['GET', 'POST'])
 def adverb():
     if request.method == 'POST':
         skeleton['Adv'] = request.form.get('opt')
-        return redirect(url_for('verb'))
+        if skeleton['N_0'] in [e[0] for e in english_words['pronouns']]:
+            return redirect(url_for('adders_no_determiner'))
+        else:
+            return redirect(url_for('adders'))
     return render_template('adverb.html', words=english_words)
 
 
 @app.route('/determiner', methods=['GET', 'POST'])
 def determiner():
-    return render_template('determiner.html')
+    type = skeleton['TEMP']
+    skeleton['TEMP'] = ""
+    determiners = [e[1] for e in english_words['determiners'] if e[2] == type]
+    if request.method == 'POST':
+        skeleton['D_0'] = request.form.get('opt')
+        if skeleton['N_0'] in [e[0] for e in english_words['pronouns']]:
+            return redirect(url_for('adders_no_determiner'))
+        else:
+            return redirect(url_for('adders'))
+    return render_template('determiner.html', words=determiners)
 
 @app.route('/add_more', methods=['GET', 'POST'])
 def add_more():
@@ -142,6 +205,16 @@ def add_more():
             return redirect(url_for('sentence'))
     return render_template('add_more.html')
 
+@app.route('/preposition', methods=['GET', 'POST'])
+def preposition():
+    prepositions = [e[0] for e in english_words['prepositions']]
+    if request.method == 'POST':
+        skeleton['P'] = request.form.get('opt')
+        if skeleton['N_0'] in [e[0] for e in english_words['pronouns']]:
+            return redirect(url_for('adders_no_determiner'))
+        else:
+            return redirect(url_for('adders'))
+    return render_template('preposition.html', words=prepositions)
 
 @app.route('/noun_v2', methods=['GET', 'POST'])
 def noun_v2():
@@ -196,7 +269,8 @@ def pronoun_v2():
 
 @app.route('/sentence', methods=['GET', 'POST'])
 def sentence():
-    builded_sentence = ' '.join([skeleton[e] for e in skeleton.keys()])
+    builded_sentence = ' '.join([skeleton[e] for e in skeleton.keys() if skeleton[e] != ""]).capitalize()
+    builded_sentence = builded_sentence + "."
     return render_template('sentence.html', sentence=builded_sentence)
 
 

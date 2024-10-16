@@ -1,10 +1,12 @@
 <html>
 <head>
     <title>Noun without adjective</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css')}}">
 </head>
 <body>
     <h1>Build an english sentence</h1>
-   <form method="POST">
+    <img src="../static/images/uk_flag.png" alt="uk_flag"/>
+    <form method="POST">
         <label for="noun_form">Choose the form of the noun:</label>
         <select name="noun_form" id="noun_form">
             <option value="singular" {% if noun_form == 'singular' %} selected {% endif %}>Singular</option>
@@ -20,7 +22,7 @@
             </select>
         {% endif %}
         <br>
-        <button type="submit">Submit</button>
+        <button type="submit">Next</button>
     </form>
 </body>
 </html>
