@@ -22,8 +22,15 @@
             <option value="future perfect" {% if verb_tense == 'future perfect' %} selected {% endif %}>Future Perfect</option>
             <option value="future perfect continuous" {% if verb_tense == 'future perfect continuous' %} selected {% endif %}>Future Perfect Continuous</option>
         </select>
+        <br>
+        <label for="verb_mode">Choose the mode of the sentence:</label>
+        <select name="verb_mode" id="verb_mode">
+            <option value="indicative" {% if verb_tense == 'indicative' %} selected {% endif %}>Indicative</option>
+            <option value="negation" {% if verb_tense == 'negation' %} selected {% endif %}>Negation</option>
+            <option value="question" {% if verb_tense == 'question' %} selected {% endif %}>Question</option>
+        </select>
        <br>
-       {% if verb_tense %}
+       {% if verb_tense and verb_mode %}
             <label for="verb">Choose a verb:</label>
             <select name="verb" id="verb">
                 {% for verb in available_verbs %}

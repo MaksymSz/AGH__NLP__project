@@ -15,7 +15,7 @@ create table if not exists verbs(
     perfect varchar
 );
 
-create table if not exists prepositional(
+create table if not exists prepositions(
     id integer primary key autoincrement,
     word varchar
 );
@@ -152,16 +152,16 @@ insert into determiners (word, type) values ('billion', 'number');
 
 
 
-insert into prepositional (word) values ('in');
-insert into prepositional (word) values ('on');
-insert into prepositional (word) values ('under');
-insert into prepositional (word) values ('over');
-insert into prepositional (word) values ('between');
-insert into prepositional (word) values ('next');
-insert into prepositional (word) values ('behind');
-insert into prepositional (word) values ('near');
-insert into prepositional (word) values ('inside');
-insert into prepositional (word) values ('at');
+insert into prepositions (word) values ('in');
+insert into prepositions (word) values ('on');
+insert into prepositions (word) values ('under');
+insert into prepositions (word) values ('over');
+insert into prepositions (word) values ('between');
+insert into prepositions (word) values ('next');
+insert into prepositions (word) values ('behind');
+insert into prepositions (word) values ('near');
+insert into prepositions (word) values ('inside');
+insert into prepositions (word) values ('at');
 
 insert into adverbs (word) values ('quickly');
 insert into adverbs (word) values ('slowly');

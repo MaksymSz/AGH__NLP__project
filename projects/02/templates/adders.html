@@ -8,12 +8,12 @@
     <img src="../static/images/uk_flag.png" alt="uk_flag"/>
     <form method="POST">
       <p>
-        <!-- wyświetlamy treść pytania -->
-      <h2> Do You want to add something to the noun? </h2>
+      <h2> Do You want to add something to the sentence? </h2>
            <select name="adder" id="adder">
             <option value="nothing" {% if adder == 'nothing' %} selected {% endif %}>Nothing</option>
             <option value="adverb" {% if adder == 'adverb' %} selected {% endif %}>Adverb</option>
             <option value="article" {% if adder == 'article' %} selected {% endif %}>Article</option>
+            <option value="demonstrative" {% if adder == 'article' %} selected {% endif %}>Demonstrative</option>
             <option value="possessive" {% if adder == 'possessive' %} selected {% endif %}>Possessive</option>
             <option value="quantifier" {% if adder == 'quantifier' %} selected {% endif %}>Quantifier</option>
             <option value="number" {% if adder == 'number' %} selected {% endif %}>Number</option>

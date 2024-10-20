@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c413b3db-fe5e-4a9a-bcb3-03b3746a772d" name="Changes" comment="project 2 v1">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/nlp course projects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/nlp course projects.iml" afterDir="false" />
+    <list default="true" id="c413b3db-fe5e-4a9a-bcb3-03b3746a772d" name="Changes" comment="project 2 v2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/02/init_db" beforeDir="false" afterPath="$PROJECT_DIR$/projects/02/init_db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/02/sentence_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/02/sentence_builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/02/templates/add_more.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/02/templates/add_more.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/02/templates/adders.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/02/templates/adders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/02/templates/adders_no_determiner.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/02/templates/adders_no_determiner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/02/templates/noun.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/02/templates/noun.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/02/templates/verb.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/02/templates/verb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/02/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/02/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/02/words.sql" beforeDir="false" afterPath="$PROJECT_DIR$/projects/02/words.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +41,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -52,9 +58,7 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2mpwU8j5oVSfAoGLTE4id0aqUTB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -106,7 +110,7 @@
       <recent name="C:\Users\Adam\Pulpit\STUDIA\PROJECTS\nlp-course-projects\projects\02\templates\css" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="nlp course projects" />
       <option name="ENV_FILES" value="" />
@@ -186,7 +190,10 @@
       <workItem from="1728999189937" duration="2563000" />
       <workItem from="1729067991002" duration="5163000" />
       <workItem from="1729073188304" duration="3138000" />
-      <workItem from="1729076354926" duration="13194000" />
+      <workItem from="1729076354926" duration="16062000" />
+      <workItem from="1729110453802" duration="3231000" />
+      <workItem from="1729198290449" duration="1972000" />
+      <workItem from="1729241506649" duration="12323000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
@@ -228,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728514898724</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="project 2 v2">
+      <option name="closed" value="true" />
+      <created>1729093064490</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729093064490</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +264,8 @@
     <MESSAGE value="Init commit" />
     <MESSAGE value="Readme.md update" />
     <MESSAGE value="project 2 v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="project 2 v1" />
+    <MESSAGE value="project 2 v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="project 2 v2" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/nlp_course_projects$utils.coverage" NAME="utils Coverage Results" MODIFIED="1728482803616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/02" />
@@ -257,7 +273,7 @@
     <SUITE FILE_PATH="coverage/nlp_course_projects$tmp.coverage" NAME="tmp Coverage Results" MODIFIED="1727815126216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/01" />
     <SUITE FILE_PATH="coverage/nlp_course_projects$fetch_data.coverage" NAME="fetch_data Coverage Results" MODIFIED="1728034576989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/01" />
     <SUITE FILE_PATH="coverage/nlp_course_projects$parse_data.coverage" NAME="parse_data Coverage Results" MODIFIED="1728049722971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/01" />
-    <SUITE FILE_PATH="coverage/nlp_course_projects$sentence_builder.coverage" NAME="sentence_builder Coverage Results" MODIFIED="1729092886951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/02" />
+    <SUITE FILE_PATH="coverage/nlp_course_projects$sentence_builder.coverage" NAME="sentence_builder Coverage Results" MODIFIED="1729272254431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/02" />
     <SUITE FILE_PATH="coverage/nlp_course_projects$sentence_generation.coverage" NAME="sentence_generation Coverage Results" MODIFIED="1728484018611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/02" />
   </component>
 </project>
