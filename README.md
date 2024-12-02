@@ -10,34 +10,40 @@ This repository contains implementations of three completed as part of the Natur
 
 ### 1. Statistical Analysis of Language
 **Objective**: Perform statistical analysis on a text corpus to study word frequency, Zipf's law, and semantic networks
+
 **Key Features**:
 * Analyzes word frequency and sentence structure
 * Implements Zipf's law to evaluate word frequency distributions
 * Constructs semantic networks to identify the "core" words of a language
 * Provides percentile-based word analyses
+  
 **Data Source**: [PAISÀ Corpus](https://www.corpusitaliano.it/en/) (Italian Web Texts)
   
-### Sentence Generation Application
-**Objective**: Create a web application for generating grammatically correct sentences in English.
-Key **Features**:
+### 2. Sentence Generation Application
+**Objective**: Create a web application for generating grammatically correct sentences in English
+
+**Key Features**:
 * Enables sentence construction using predefined grammar rules
 * Supports 12 verb tenses in indicative, interrogative, and negative forms
 * Incorporates parts of speech such as nouns, verbs, adjectives, adverbs, and determiners
 * Uses a step-by-step interface for sentence customization
 
-Technologies:
+**Technologies**:
 * Python (Flask Framework)
 * HTML/CSS for user interface
 * SQLite for words storage
 
-### Verb-Noun Relationship Analysis and Noun Set Manipulation
-**Objective**: Analyze semantic relationships between verbs and nouns and provide tools for operations on noun sets.
+### 3. Verb-Noun Relationship Analysis and Noun Set Manipulation
+**Objective**: Analyze semantic relationships between verbs and nouns and provide tools for operations on noun sets
+
 **Key Features**:
 * Extracts verb-noun pairs from a text corpus
 * Analyzes verb usage patterns and associated nouns
 * Implements set operations (AND, OR, XOR) for advanced linguistic inquiries
 * Provides a command-line application for semantic analysis
-**Data Source**: Processed text from the PAISÀ Corpus.
+  
+**Data Source**: Processed text from the PAISÀ Corpus
+  
 **Technologies**:
 * Python
 * [spaCy](https://spacy.io/) for lemmatization and NLP tasks
