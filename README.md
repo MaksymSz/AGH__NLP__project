@@ -109,6 +109,3 @@ Each project includes a detailed report that covers:
 4. Conclusion: Insights gained and potential improvements.
 
 > **_NOTE:_** Reports can be achieved by direct message
-
-## License
-This project is licensed under the MIT License.
